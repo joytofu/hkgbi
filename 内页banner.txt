@@ -1,0 +1,14 @@
+<div style="width:35%;display:block;">
+	<p style="line-height:40px;font-family:微软雅黑;font-size:18px;color:red;">
+		阳光私募&nbsp;&nbsp;&nbsp;&nbsp;唯有巨牛
+	</p>
+	<p style="line-height:20px;font-size:16px;color:black;font-family:微软雅黑;">
+		顶级基金管理人<br />
+		助你获取翻倍高额收益
+	</p>
+</div>
+<div onclick="window.location.href='index.php?c=list&amp;cs=reg&amp;'" class="button red">
+	<div class="shine">
+	</div>
+	<span style="font-size:18px">立即预约</span>
+</div>

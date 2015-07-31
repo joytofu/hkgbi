@@ -1,0 +1,25 @@
+<div>
+	<span style="font-size: 18px;"><strong>招聘人数：</strong>若干</span>
+</div>
+<div>
+	<span style="font-size: 18px;"><br />
+	</span>
+</div>
+
+
+
+
+<div>
+	<span style="font-size:18px;"><br />
+	</span>
+</div>
+<div>
+	<span style="font-size:18px;"><strong>地址：</strong></span><a href="index.php?c=msg&amp;id=2306&amp;" target="_blank" style="font-size: 18px;">广州分部</a><span style="font-size: 18px;">、</span><a href="index.php?c=msg&amp;id=2306&amp;" target="_blank" style="font-size: 18px;">天河分部</a><span style="font-size: 18px;">、</span><a href="index.php?c=msg&amp;id=2306&amp;" target="_blank" style="font-size: 18px;">南海分部</a><span style="font-size: 18px;">、</span><a href="index.php?c=msg&amp;id=2306&amp;" target="_blank" style="font-size: 18px;">顺德分部</a><span style="font-size: 18px;">、</span><a href="index.php?c=msg&amp;id=2306&amp;" target="_blank" style="font-size: 18px;">成都分部</a>
+</div>
+<div>
+	<span style="font-size: 18px;"><br />
+	</span>
+</div>
+<div>
+	<span style="font-size:18px;">有意者请将个人简历发至：<span style="color:#cc0000;">hr@hkgbf.com</span></span>
+</div>

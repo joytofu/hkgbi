@@ -1,0 +1,144 @@
+Array
+(
+    [me] => Array
+        (
+            [id] => 170
+            [identifier] => mt
+            [langid] => zh
+            [cate_name] => 市场动态
+            [parentid] => 168
+            [module_id] => 107
+            [tpl_index] => 
+            [tpl_list] => 
+            [tpl_file] => 
+            [if_index] => 0
+            [taxis] => 2
+            [status] => 1
+            [if_hidden] => 0
+            [seotitle] => 
+            [keywords] => 
+            [description] => 
+            [ifspec] => 0
+            [note] => 
+            [psize] => 12
+            [inpic] => 
+            [linkurl] => 
+            [target] => 0
+            [ordertype] => post_date:desc
+            [subcate] => 
+            [ico] => 
+            [small_pic] => 
+            [medium_pic] => 
+            [big_pic] => 
+            [fields] => 
+        )
+
+    [rslist] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 2586
+                    [module_id] => 107
+                    [cate_id] => 170
+                    [title] => 中港基金互认开闸，6万亿资金流入香港，对港股超大利好
+                    [subtitle] => 
+                    [style] => 
+                    [status] => 1
+                    [hidden] => 0
+                    [link_url] => 
+                    [target] => 0
+                    [author] => admin
+                    [author_type] => admin
+                    [seotitle] => 
+                    [keywords] => 
+                    [description] => 
+                    [note] => 
+                    [identifier] => 
+                    [hits] => 60
+                    [good_hits] => 0
+                    [bad_hits] => 0
+                    [post_date] => 1432392926
+                    [modify_date] => 1432611800
+                    [thumb_id] => 0
+                    [istop] => 0
+                    [isvouch] => 1
+                    [isbest] => 0
+                    [langid] => zh
+                    [points] => 0
+                    [ip] => 219.130.242.153
+                    [replydate] => 0
+                    [taxis] => 0
+                    [htmltype] => cateid
+                    [tplfile] => 
+                    [star] => 0
+                    [price] => 0
+                    [price_currency] => 
+                    [weight] => 0
+                    [qty] => 0
+                    [is_qty] => 0
+                    [qty_unit] => 
+                    [s_rg] => 
+                    [s_qx] => 
+                    [s_ns] => 
+                    [rg] => 
+                    [qx] => 
+                    [ns] => 
+                    [picture] => 
+                    [content] => <span style="font-family:Microsoft YaHei;font-size:16px;">&nbsp; &nbsp; &nbsp; 证监会新闻发言人邓舸22日表示，中国证监会与香港证监会开展内地与香港基金互认工作，同时发布香港互认基金管理暂行规定，自7月1日起实行。基金互认的初始投资额度为资金进出各3000亿元人民币。<br />&nbsp; &nbsp; &nbsp; 所谓基金互认，是指内地与香港的基金产品，只要获得一方监管部门的审核，就可以在另一方的市场销售。<br />&nbsp; &nbsp; &nbsp; 香港财政司司长曾俊华表示，有关安排是内地与内地以外市场之间的首项基金互认安排，是金融市场发展的重大突破。这项安排将有助丰富两地基金产品的种类，并为两地基金业界带来新机遇，深化两地金融市场互联互通。<br />&nbsp; &nbsp; &nbsp;<a href="http://www.hkgbi.com"> 巨牛</a>金融集团董事长赵中华称，A股及港股今天已因中港基金互认消息炒高，且曾破28000点大关，由于额度达3000亿元人民币，他认为，下周会利好中港股市，恒指有望再试28300点的高位，最受惠股份肯定是香港交易所，券商股以及证券新股。<br />&nbsp; &nbsp; &nbsp; 消息人士指出，沪港通升级版、深港通以及基金互认乃中港两地政府部门同步推进的“一系列”工作，无分先后，并将于今年内全部启动。这次基金互认较市场引颈以待的深港通走快一步，主要由于后者涉及系统测试等技术问题而需要稍等一会。<br /><br />&nbsp; &nbsp; &nbsp; </span><span style="font-family:Microsoft YaHei;font-size:16px;"><strong>内地与香港基金互认均需符合五点要求</strong><br />&nbsp; &nbsp; &nbsp; 根据备忘录，符合条件的内地公募基金通过简易的认可程序后，即可向香港投资者销售。<br />&nbsp; &nbsp; &nbsp; 香港基金内地销售应当委托境内有资质的机构代理办理产品注册等事项，内地机构担任香港基金代理需符合相关条件，担任香港基金代理销售的内地机构应当具备中国证监会核准的公募基金管理资格，应当是内地公募基金管理人或托管人，需为香港基金办理其产品销售、资金清算、通信联络、客户服务监控等事情。<br />&nbsp; &nbsp; &nbsp; 邓舸表示，内地基金与香港基金互认的标准是一致的，根据测算，截至2014年末符合条件的香港基金有100只左右，截至2015年一季度末内地基金有850只左右。<br />&nbsp; &nbsp; &nbsp; 邓舸称，开展内地与香港基金互认工作，将拓宽跨境投资渠道，提升两地市场竞争力；为两地监管机构共同建立基金监管标准奠定基础，推动亚洲资产管理行业发展；为两地投资者提供更加多元化的投资产品。<br />&nbsp; &nbsp; &nbsp; 此次签署的备忘录包括互认基本概念、框架安排、主要原则、适用范围、信息交换、监管合作等主要内容。备忘录的附录还对互认基金设立了资格条件、种类、管理人、托管人、代理人、投资、运作、销售、信息披露、持有人保护等须共同遵守的标准。<br />&nbsp; &nbsp; &nbsp; 中国证监会就此还制定了专门的基金互认暂行规定，内容包括五方面：一是明确了香港互认基金进入内地的资格条件注册要求，二是明确投资运作及信息披露原则，三是明确了销售基本原则及其他特殊要求，四是明确了香港互认基金内地代理机构的条件、职责、代理协议内容等；五是明确了监管安排。<br /><br />&nbsp; &nbsp; &nbsp; <strong>涉及面有多大？6万亿公募望出海</strong><br />&nbsp; &nbsp; &nbsp; 邓舸称，根据测算，截至2014年末符合条件的香港基金有100只左右，截至2015年一季度末内地基金有850只左右。<br />&nbsp; &nbsp; &nbsp; 截至2013年底，香港的基金管理业务合计资产达破纪录的16万亿港元，其中超过70%来自海外投资者；而持牌资产管理公司及基金顾问公司的占比约74%，注册机构处理的资产管理业务及其他私人银行业务的占比为23%。<br />&nbsp; &nbsp; &nbsp; 中国证券投资基金业协会数据显示，截至今年4月末，中国公募基金资产规模合计达6.2万亿元人民币，单月大增近万亿元或18.3%。<br />&nbsp; &nbsp; &nbsp; 市场估计，互认闸门一开，中国逾6万亿元人民币公募基金有望来港分销，带动香港股市。<br /><br />&nbsp; &nbsp; &nbsp;<strong> 机构如何看？跨境投资需求越来越大</strong><br />&nbsp; &nbsp; &nbsp; <a href="http://www.hkgbi.com" target="_blank">巨牛</a>金融分析师称，基金互认对基金业的发展有重要作用，特别是随着人民币国际化以及资本账户开放，市场对内地与香港的跨境投资需求会愈来愈大。<br />&nbsp; &nbsp; &nbsp; 赵中华称，基金互认将凸显出香港作为主要资管中心的地位。由于中国投资者被压抑的巨大境外投资需求存在，互认安排将引导内地资本走向香港以至全球市场。<br />&nbsp; &nbsp; &nbsp; 他表示，中港两地基金互认对双方都是双赢的局面，对内地的投资者来说拓宽了投资渠道，分享海外市场的增长。对香港投资者来说较为直接参与A股市场以及银行债券市场。</span>
+                )
+
+            [1] => Array
+                (
+                    [id] => 2750
+                    [module_id] => 107
+                    [cate_id] => 170
+                    [title] => 写在黎明黑暗前
+                    [subtitle] => 
+                    [style] => 
+                    [status] => 1
+                    [hidden] => 0
+                    [link_url] => 
+                    [target] => 0
+                    [author] => admin
+                    [author_type] => admin
+                    [seotitle] => 
+                    [keywords] => 
+                    [description] => 
+                    [note] => <span style="font-family: 'Microsoft YaHei'; line-height: 19.2000007629395px;"><span style="font-size:16px;">导读：尽管这个星期A股市场接二连三跳水，但在中国有个成语叫“否极泰来”。空头经过持续猛烈杀跌后，其力量将大幅缩减，况且当前国家队救市战场也将从权重大幅扩散到中小市值个股上。巨牛金融分析认为，这已经是黎明前的黑暗，建议投资者等待市场企稳后再考虑入场，切勿在这黑暗中选择放弃。</span></span>
+                    [identifier] => 
+                    [hits] => 2
+                    [good_hits] => 0
+                    [bad_hits] => 0
+                    [post_date] => 1436406276
+                    [modify_date] => 1436412158
+                    [thumb_id] => 563
+                    [istop] => 0
+                    [isvouch] => 1
+                    [isbest] => 0
+                    [langid] => zh
+                    [points] => 0
+                    [ip] => 14.151.196.202
+                    [replydate] => 0
+                    [taxis] => 0
+                    [htmltype] => cateid
+                    [tplfile] => 
+                    [star] => 0
+                    [price] => 0
+                    [price_currency] => 
+                    [weight] => 0
+                    [qty] => 0
+                    [is_qty] => 0
+                    [qty_unit] => 
+                    [s_rg] => 
+                    [s_qx] => 
+                    [s_ns] => 
+                    [rg] => 
+                    [qx] => 
+                    [ns] => 
+                    [picture] => upfiles/2015/07/09/big_563.jpg
+                    [content] => <p><span style="font-family:Microsoft YaHei;font-size:16px;">导读：尽管这个星期A股市场接二连三跳水，但在中国有个成语叫“否极泰来”。空头经过持续猛烈杀跌后，其力量将大幅缩减，况且当前国家队救市战场也将从权重大幅扩散到中小市值个股上。巨牛金融分析认为，这已经是黎明前的黑暗，建议投资者等待市场企稳后再考虑入场，切勿在这黑暗中选择放弃。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br /></span></p><span style="font-family:Microsoft YaHei;font-size:16px;">这个星期A股市场接二连三地跳水，跳得人心惶惶。在周末管理层出台多项救市政策的利好刺激下，周一沪深两市大盘均出现大幅高开，但开盘后大盘快速回落；周二以银行、证券等为首的蓝筹股力挽狂澜，中小盘股却直线跌停；周三，空头继续无视救市政策，更加来势汹汹地砸盘。<br /><br /></span><p><span style="font-family:Microsoft YaHei;font-size:16px;">然而，在中国有个成语叫“否极泰来”， 空头经过持续猛烈杀跌后，其力量将大幅缩减，况且当前国家队救市战场也将从权重大幅扩散到中小市值个股上。巨牛金融分析认为，这已经是黎明前的黑暗，投资者勿在这黑暗中选择放弃。目前入市的风险已经大幅降低，上涨机会大于下跌机会，建议投资者之前没有买股票的可以适当建仓，控制不超过50%的仓位，不要浪费此轮底部行情。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br /></span></p><span style="font-family:Microsoft YaHei;font-size:16px;">这次调整是对疯牛行情的剧烈调整。在这轮行情中，许多人将原先放在实业的钱拿到股市里，结果实体经济得不到改善；而在大学校园里，大学生借钱炒股、天天翘课的现象也屡见不鲜，这不是政府所愿意看到的。从这个角度上讲，此次调整给投资者敲响了警钟，有利于慢牛的健康发展。<br /></span><p><span style="font-family:Microsoft YaHei;font-size:16px;"></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br /></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><img src="http://www.hkgbf.com/upfiles/2015/07/09/581952e719f57d7f.jpg" border="0" alt="" /><br /><br /></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">这轮暴跌也给了部分去年新成立的私募机构一个生存的空间。股票投资需要专业的金融知识、需要依靠团队作战、具备严格的风险控制能力——而这恰恰是散户所缺乏的。选股、操作、风控都是自己操刀。可以预见的是，牛市的下半场个股将明显两级分化，机构具备了专业的选股能力，因此可能在暴跌后会有部分散户选择将资金交给专业机构投资者。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br />更重要的是，此轮推动疯牛上涨的是杠杆效应，而非改革所带来的红利。就算在2007年的牛市行情中，投资者运用融资、配资这类金融杠杆比例非常小，但这轮牛市银行却成了罪魁祸首。自2008年全球金融海啸以来到2015年第一季度中国的银行总资产几乎增加了20万亿美元，而同期美国的银行总资产只增加了区区2.7万亿美元。在中国，银行几乎是垄断了大部分的融资市场。中国股市的参与资金杠杆太高，而金融监管部门对杠杆资金的监管又严重不足。<br /><br /><img src="http://www.hkgbf.com/upfiles/2015/07/09/40ec2d4a75949042.jpg" border="0" alt="" /><br /><br /></span></p><p></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">最严重也是最可怕的一点，金融市场的危机将会严重影响整个国家的经济。万一沪成指失守3100点，深成指失守10000点，那恐怕会引起全行业的经济萧条，大大小小的企业迎来倒闭潮，中国经济从此步入萧条期。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br />巨牛金融投研部依旧相信，这是黎明前的黑暗，只要投资者坚信此届政府能完成改革，就应该坚守。我们坚信以习近平、李克强为首的领导班子能保持指数平稳增长。跟着大部队走，在3100点能够坚守，站稳底部，接下来市场出现大幅反转。</span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br />所谓上帝欲使其灭亡，必先让其疯狂，这不仅适用于多头大牛市见顶时的疯狂阶段，更适宜于当前空头疯狂逆政策杀跌阶段。巴菲特曾于2008年金融危机高峰时呼吁投资者保持冷静，并称金融危机才是发觉好公司的新机会。因此，在市场连续非理性杀跌后，我们不应倒在黎明前的黑暗当中，而应坚定风云后便见彩虹的信心。<br /></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><br /></span></p><p></p><p></p><p></p><p><span style="font-family:Microsoft YaHei;font-size:16px;"><img src="http://www.hkgbf.com/upfiles/2015/07/09/db940cf3a39ffee3.png" border="0" alt="" /><br /><br /></span></p><p><span style="font-family:Microsoft YaHei;font-size:16px;">无论如何，市场自身调整充分后出现的底部才是真正的底部，它可能不是一个点，可能是一个平台，一个区间，作为理性投资者，建议等待市场企稳后再考虑入场。对于中长期而言，3100点具备中短期较大的支撑，这个点位是牛市的基石，相信在这个位置附近有效守住后，黎明很快来临，守住资金，保证大盘在6000点的时候，我们还活着！</span><br /></p>
+                )
+
+        )
+
+)

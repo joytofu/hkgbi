@@ -1,0 +1,35 @@
+Array
+(
+    [id] => 171
+    [identifier] => recruit_staff
+    [langid] => zh
+    [cate_name] => 分部/总部招聘
+    [parentid] => 167
+    [module_id] => 114
+    [tpl_index] => 
+    [tpl_list] => list_recruit_staff
+    [tpl_file] => 
+    [if_index] => 0
+    [taxis] => 255
+    [status] => 1
+    [if_hidden] => 0
+    [seotitle] => 
+    [keywords] => 
+    [description] => 
+    [ifspec] => 0
+    [note] => 
+    [psize] => 30
+    [inpic] => 
+    [linkurl] => index.php?c=list&cs=recruit_staff&
+    [target] => 0
+    [ordertype] => post_date:desc
+    [subcate] => 
+    [ico] => 
+    [small_pic] => 
+    [medium_pic] => 
+    [big_pic] => 
+    [fields] => 
+    [title] => 加入我们
+    [if_cate] => 1
+    [if_list] => 1
+    [if_msg] => 1

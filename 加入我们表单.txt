@@ -1,0 +1,67 @@
+<form id="form1" name="cooperation" method="post" onsubmit="return check()" action="deal.php">
+	<table width="90%" border="0" cellspacing="1" cellpadding="0" style="margin:10px auto" id="cvf">
+		<tbody>                       
+			<tr>        
+				<td width="25%" align="right">
+					姓名：
+				</td>        
+				<td width="75%">
+					<input name="fullname" type="text" id="fullname" size="50" class="text1" required="required" pattern="[u4E00-u9FA5]{2,4}" />          <span class="hover">*</span>
+				</td>        
+			</tr>  
+			<tr>        
+				<td align="right">
+					单位名称：
+				</td>        
+				<td>
+					<input name="danwei" type="text" id="danwei" size="50" class="text1" required="required" />  <span class="hover">*</span>
+				</td>        
+			</tr>              
+			<tr>        
+				<td align="right">
+					手机号码：
+				</td>        
+				<td>
+					<input name="mobile" type="text" id="mobile" size="50" class="text1" required="required" />          <span class="hover">*</span>
+				</td>        
+			</tr>             
+			<tr>        
+				<td align="right">
+					E-mail：
+				</td>        
+				<td>
+					<input name="email" type="email" id="email" size="50" class="text1" />
+				</td>        
+			</tr>                                         
+			<tr>        
+				<td align="right">
+					传真：
+				</td>        
+				<td>
+					<input name="fax" type="text" id="fax" size="50" class="text1" />
+				</td>        
+			</tr>                  
+			<tr>        
+				<td align="right">
+					合作方向：
+				</td>        
+				<td>
+					<textarea placeholder="请填写贵公司与巨牛的合作方向" name="content" cols="50" class="text2" rows="10" id="content"></textarea>
+				</td>        
+			</tr>                        
+			<tr>        
+				<td align="right" height="40">
+					&nbsp;
+				</td>        
+				<td>
+					<input type="submit" name="button2" id="button2" value="发送" style=" width:50px; height:25px;  float:left" />           <input type="reset" name="button2" id="button2" value="重置" style=" width:50px; height:25px; margin-left:30px;float:left" />
+				</td>        
+			</tr>             
+			<tr>        
+				<td align="left" style="padding-left:100px;" colspan="2">
+					<span class="hover">注：带*为必填项！</span>
+				</td>        
+			</tr>      
+		</tbody>
+	</table>                      
+</form>

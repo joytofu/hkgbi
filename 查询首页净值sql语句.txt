@@ -1,0 +1,25 @@
+select * from (SELECT a.title,a.cate_id,b.val FROM `juniu2_list` as a inner join `juniu2_list_ext`as b on a.id=b.id where a.module_id=115 and b.field = "value" order by a.id desc) c where cate_id in(187,183,180) group by cate_id order by cate_id desc
+
+
+select * from (SELECT a.title,a.cate_id,b.val FROM `juniu2_list` as a inner join `juniu2_list_ext`as b on a.id=b.id where a.module_id=115 and b.field = "value" order by a.id desc) c group by cate_id order by field(cate_id,187,183,180,181,182,184,185)
+
+
+//该sql语句先查询出id和title再去查询juniu2_list,查出的id去查juniu2_list_ext查具体值
+select * from(SELECT c.id, c.cate_name, e.title, a.cate_id,a.note, c.module_id, b.val, d.thumb
+    FROM  `juniu2_list` AS a
+    LEFT JOIN juniu2_list_ext AS b ON a.id = b.id
+    LEFT JOIN juniu2_cate AS c ON a.title = c.cate_name
+    LEFT JOIN juniu2_upfiles AS d ON a.thumb_id = d.id
+    LEFT JOIN juniu2_list AS e ON c.id = e.cate_id
+    WHERE b.field = 'a5'
+    {$sql_term}
+    order by c.cate_name,date_format(e.title,'%y-%m-%d') desc)f
+    group by cate_name
+
+$row['id']、$row['title']
+
+
+//循环以下
+SELECT a.val,b.title,a.id FROM `juniu2_list_ext` as a left join juniu2_list as b on a.id = b.id WHERE b.cate_id=187 and b.title="2015-7-17" and a.field="value"
+
+再将$row['val']传入html模板

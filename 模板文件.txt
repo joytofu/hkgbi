@@ -1,0 +1,10 @@
+list_book.html:加入我们表单
+msg_product.html:产品内页
+deal/deal1/deal2.php：获取注册（预约）表单
+msg_danye.html:新闻公告内容页
+list_danye.html:新闻公告列表
+msg_joinus.html:加入我们内容页
+list_joinus.html：加入我们列表页
+msg_joinus_spec.html:加入我们的第一显示页
+list_recruit_staff.html:分部/总部招聘列表页
+list_recruit_trader.html:基金管理部列表页
