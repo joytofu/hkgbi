@@ -1,0 +1,172 @@
+<!-- inc:head -->
+<!-- inc:banner -->
+<!-- inc:inc/saixuan -->
+
+
+<div class="jingxuan">
+<div class="clear"></div>
+
+    <!--计算预计年化收益率-->
+    <script type="text/javascript">
+        function annual_yield(createDate,valueDate,fundvalue) {
+            var startDate = Date.parse(createDate);   //转化成时间戳格式
+            var endDate = Date.parse(valueDate);   //转化成时间戳格式
+            var daysStamp = (endDate - startDate) / 86400000;
+            var days = daysStamp + 1;   //基金发行了的天数
+            var yr = (Number(fundvalue) - 1) * 12 / (days / 30);   //预计年化收益率
+            if((yr*100)>=0) {
+                var yr = (yr * 100).toFixed(2) + '%';
+            }else{
+                var yr = '50%';
+            }
+            document.write(yr);
+        }
+    </script>
+  <!--run:-->
+ require_once('app/conn.php');
+$catid=$_GET["catid"];
+if($catid<>0){
+$tt="and a.cate_id='$catid'";
+}
+
+$rg=is_null($_GET['rg'])?"and a.s_rg='{$_GET['rg']}'":"";
+$ns=is_null($_GET['ns'])?"and a.s_ns='{$_GET['ns']}'":"";
+$qx=is_null($_GET['qx'])?"and a.s_qx='{$_GET['qx']}'":"";
+$sql_term=$rg.$ns.$qx.$tt;
+$sql="select*from juniu2_list where module_id=109 {$sql_term} order by id desc";
+
+$Page_size=6; 
+
+$result=mysql_query($sql);
+
+$count = mysql_num_rows($result); 
+$page_count = ceil($count/$Page_size); 
+
+$init=1; 
+$page_len=5; 
+$max_p=$page_count; 
+$pages=$page_count; 
+
+
+if(empty($_GET["page"])||$_GET["page"]<0){ 
+$page=1; 
+}else { 
+$page=$_GET['page']; 
+} 
+
+$offset=$Page_size*($page-1); 
+
+
+$sql="select * from(SELECT c.id, c.cate_name, e.title, a.cate_id, a.note, c.module_id, b.val, d.thumb
+    FROM  `juniu2_list` AS a
+    LEFT JOIN juniu2_list_ext AS b ON a.id = b.id
+    LEFT JOIN juniu2_cate AS c ON a.title = c.cate_name
+    LEFT JOIN juniu2_upfiles AS d ON a.thumb_id = d.id
+    LEFT JOIN juniu2_list AS e ON c.id = e.cate_id
+    WHERE b.field = 'a5'
+    {$sql_term}
+    order by c.cate_name,date_format(e.title,'%y-%m-%d') desc)f
+    group by cate_name";
+
+$result=mysql_query($sql,$webconn);
+$key1=1;
+    $fund_info = array();
+while ($row=mysql_fetch_assoc($result)) {
+    $fund_info[] = $row;
+}
+
+
+    foreach($fund_info AS $key=>$value){
+    $sql = "SELECT a.val FROM `juniu2_list_ext` as a left join juniu2_list as b on a.id = b.id WHERE b.cate_id=$fund_info[id] and b.title='{$fund_info[title]}' and
+    a.field='value'";
+    $rs = mysql_query($sql);
+    $fund_value = array();
+    while($row = mysql_fetch_assoc($rs)){
+    $fund_value[] = $row;
+    }
+    }
+
+    
+    $i=0;
+    foreach($fund_value AS $key=>$value){
+       $fund_info[$i][value]=$value[value];
+       $fund_info[$i][f_id]=$value[id];
+       $i++;
+    }
+<!--/run-->
+
+
+    <!--$fund_info AS $key=>$value-->
+  <div class="ipro" <!--if(($key1)%3==0)-->id="ipro"<!--end-->>
+     <a style="font-size:24px; color:#da251d" href="index.php?c=msg&id={:$row[id]}" title="{:$fund_info[cate_name]}" target="_blank"><img src="{:$picture}"></a>
+     <p><a style="font-size:24px; color:#da251d" href="index.php?c=msg&id={:$row[id]}" title="{:$row[title]}" target="_blank">{:$row[title]}</a></p>
+     <div class="pro_txt">{:$fund_info[note]}</div>
+     <p id="nn">★ 单位净值：{:fund_info[value]}</p>
+     <p id="nn">★ 净值日期：{:$fund_info[title]</p>
+     <p id="nn">★ 成立日期：{:$fund_info[val]}</p>
+     <p id="nn">★ 预计年化收益率:<script>annual_yield("{:$a5}","{:$a3}",{:$a2});</script></p>
+<p align="center"><a href="index.php?c=list&cs=reg&" title="{:$row[title]}" target="_blank">
+    <img src="images/01.png" style="width:140px; height:57px;"></a></p>
+    </div>
+<!--end-->
+        <!--run:--> 
+        $key1++;
+} 
+if($count==0){
+echo "<p class=npop>没有符合条件的信息！</p>";
+
+}else{
+
+$page_len = ($page_len%2)?$page_len:$pagelen+1;//頁??? 
+$pageoffset = ($page_len-1)/2;//頁???左右偏移量 
+
+$key='<div class="clear"></div><div class="page">搜索结果总数：'; 
+$key.=$count; 
+$key.="&nbsp;&nbsp;&nbsp;&nbsp;$page/$pages &nbsp;&nbsp;&nbsp;&nbsp;"; //第几頁,共几頁 
+if($page!=1){ 
+$key.="<a href=\"".$_SERVER['PHP_SELF']."?c=list&ms=search&page=1&catid=".$catid."&qx=".$qx."&ns=".$ns."&rg=".$rg."\">首页</a> "; //Frist 
+$key.="<a href=\"".$_SERVER['PHP_SELF']."?c=list&ms=search&page=".($page-1)."&catid=".$catid."&qx=".$qx."&ns=".$ns."&rg=".$rg."\">上页</a>"; //Back 
+}else { 
+$key.="首页 ";//Frist 
+$key.="上页"; //Back 
+} 
+if($pages>$page_len){ 
+//如果?前頁小于等于左偏移 
+if($page<=$pageoffset){ 
+$init=1; 
+
+$max_p = $page_len; 
+}else{//如果?前頁大于左偏移 
+//如果?前頁?右偏移超出最大分頁? 
+if($page+$pageoffset>=$pages+1){ 
+$init = $pages-$page_len+1; 
+}else{ 
+//左右偏移都存在?的?算 
+$init = $page-$pageoffset; 
+$max_p = $page+$pageoffset; 
+} 
+} 
+} 
+for($i=$init;$i<=$max_p;$i++){ 
+if($i==$page){ 
+$key.=' <span  style=color:red>'.$i.'</span>'; 
+} else { 
+$key.=" <a href=\"".$_SERVER['PHP_SELF']."?c=list&ms=search&catid=".$catid."&page=".$i."&qx=".$qx."&ns=".$ns."&rg=".$rg."\">".$i."</a>"; 
+} 
+} 
+if($page!=$pages){ 
+$key.=" <a href=\"".$_SERVER['PHP_SELF']."?c=list&ms=search&catid=".$catid."&page=".($page+1)."&qx=".$qx."&ns=".$ns."&rg=".$rg."\">下页</a> ";//Next 
+$key.="<a href=\"".$_SERVER['PHP_SELF']."?c=list&ms=search&catid=".$catid."&page={$pages}&qx=".$qx."&ns=".$ns."&rg=".$rg."\">末页</a>"; //Last 
+}else { 
+$key.="下页 ";//Next 
+$key.="末页"; //Last 
+} 
+
+echo $key<!--/run-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<!--run:--> echo "</div>"; }<!--/run-->
+
+
+ </div>
+
+<!-- inc:foot -->

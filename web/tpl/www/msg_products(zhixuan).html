@@ -1,0 +1,224 @@
+<!-- inc:head -->
+<!-- inc:banner -->
+
+<div class="pro_bg">
+   <h1 class="pro_top">巨牛-智选一号</h1>
+   <div class="clear"></div>
+    <!--inc:fund_info-->
+   
+</div>
+
+<div id="tabs1">
+ <div class="menu1box">
+  <ul id="menu1">
+   <li class="hover" onmouseover="setTab(1,0)">产品概况</li>
+   <li onmouseover="setTab(1,1)">净值走势</li>
+<li onmouseover="setTab(1,2)">我要预约</li>
+  </ul>
+ </div>
+ <div class="main1box">
+  <div class="main" id="main1">
+   <ul class="block">
+  {:$rs[content]}
+       <!-- inc:share_button -->
+   </ul>
+      <ul><div id="svg" style="width:1200px;height:70%"></div>
+      </ul>
+   <ul>
+      <form style="margin-left:10%" id="form1" name="form1" method="post" onsubmit="return check()" action="submit.php">
+	    <table width="90%" border="0" cellspacing="1" cellpadding="0"  style="margin:10px auto" id="cvf">
+            <input name="title" type="text" id="title" size="50" value="智选一号"   style="display: none"/>
+            <input name="module_id" type="text" id="module_id" size="50" value="23"   style="display: none"/>
+            <input name="cate_id" type="text" id="cate_id" size="50" value="193"  style="display: none"/>
+            
+            <tr>
+	        <td width="24%" align="right">服务分部：</td>
+	        <td width="76%">
+	          <select name="department" type="text" id="department"  class="text1" />
+                <option value="广州分部">广州分部</option>
+                <option value="天河分部">天河分部</option>
+                <option value="南海分部">南海分部</option>
+                <option value="顺德分部">顺德分部</option>
+                <option value="成都分部">成都分部</option>
+            </select>
+	          <span class="hover">*</span></td>
+	        </tr>
+            
+               <tr>
+	        <td width="25%" align="right">姓名：</td>
+	        <td width="75%">
+	          <input name="fullname" type="text" id="fullname" size="50"   class="text1"/>
+	          <span class="hover">*</span></td>
+	        </tr>
+               <tr>
+	        <td align="right">手机号码：</td>
+	        <td><input name="mobile" type="text" id="mobile" size="50"   class="text1"/>
+	          <span class="hover">*</span></td>
+	        </tr>
+             <tr>
+	        <td align="right">E-mail：</td>
+	        <td><input name="email" type="text" id="email" size="50"  class="text1" /></td>
+	        </tr>
+              
+              <tr>
+	        <td align="right">单位名称：</td>
+	        <td><input name="danwei" type="text" id="danwei" size="50"  class="text1"/></td>
+	        </tr>
+              <tr>
+	        <td align="right">传真：</td>
+	        <td><input name="fax" type="text" id="fax" size="50"  class="text1" /></td>
+	        </tr>
+ 
+                 <tr>
+	        <td align="right">备注信息：</td>
+	        <td><textarea name="content" cols="50" class="text2" rows="10" id="content"></textarea>
+	          </td>
+	        </tr>
+     
+             
+	      <tr>
+	        <td align="right" height="40">&nbsp; &nbsp;</td>
+	        <td>  <input type="submit" name="button2" id="button2" value="提交" style=" width:50px; height:25px;  float:left" />
+	           <input type="reset" name="button2" id="button2" value="重置" style=" width:50px; height:25px; margin-left:30px;float:left" />
+             
+               </td>
+	        </tr>
+             <tr>
+	        <td align="left" style="padding-left:100px;" colspan="2"><span class="hover">注：带*为必填项！</span></td>
+	        </tr>
+	      </table>
+          
+          
+	  </form>
+      <script type="text/javascript">
+function check()
+{
+if (document.form1.title.value=="")
+{
+window.alert("请输入标题!!       ");
+document.form1.title.focus();
+return false;
+}
+if (document.form1.fullname.value=="")
+{
+window.alert("请输入联系人姓名!!       ");
+document.form1.fullname.focus();
+return false;
+}
+
+
+if (document.form1.mobile.value=="")
+{
+window.alert("请输入电话!       ");
+document.form1.mobile.focus();
+return false;
+}
+//
+String.prototype.Trim = function() {
+var m = this.match(/^\s*(\S+(\s+\S+)*)\s*$/);
+return (m == null) ? "" : m[1];
+}
+String.prototype.isMobile = function() {
+return (/^(?:18\d|14\d|13\d|15[123456789])-?\d{5}(\d{3}|\*{3})$/.test(this.Trim()));
+}
+String.prototype.isTel = function()
+{
+//"兼容格式: 国家代码(2到3位)-区号(2到3位)-电话号码(7到8位)-分机号(3位)"
+    //return (/^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+    return (/^(([0\+]\d{2,3}-)?(0\d{2,3}))(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+}
+
+with(document.form1){
+if (mobile.value.isMobile())  {
+
+}
+else {
+alert("请输入正确的电话号码或手机\n\n例如:13534596987");
+mobile.focus();
+return false;
+
+}
+}
+//
+
+
+
+
+if (document.form1.email.value!="")
+{
+
+
+
+ var temp = document.getElementById("email");
+        var myreg = /(\S)+[@]{1}(\S)+[.]{1}(\w)+/;
+        if(temp.value!="")
+        {
+            if(!myreg.test(temp.value))
+            {
+               window.alert("您的E-mail格式有误，请重新输入!!       ");
+            document.form1.email.focus();
+return false;
+            }
+          
+        }
+		
+
+	
+	
+	//
+String.prototype.Trim = function() {
+var m = this.match(/^\s*(\S+(\s+\S+)*)\s*$/);
+return (m == null) ? "" : m[1];
+}
+String.prototype.isMobile = function() {
+return (/^(?:18\d|14\d|13\d|15[123456789])-?\d{5}(\d{3}|\*{3})$/.test(this.Trim()));
+}
+String.prototype.isTel = function()
+{
+//"兼容格式: 国家代码(2到3位)-区号(2到3位)-电话号码(7到8位)-分机号(3位)"
+    //return (/^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+    return (/^(([0\+]\d{2,3}-)?(0\d{2,3}))(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+}
+
+
+//
+	
+	
+	
+	}
+		
+
+}
+</script>
+      </ul>      
+
+  </div>
+     
+    
+</div>
+    <script>
+        var title = "智选一号";
+        var min = 0.7;
+    </script>
+    <!--inc:svg-->
+<!-- inc:foot -->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(m,n){
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+ for(i=0;i<tli.length;i++){
+  tli[i].className=i==n?"hover":"";
+  mli[i].style.display=i==n?"block":"none";
+ }
+}
+/*第三种形式 利用一个背景层定位*/
+var m3={0:"",1:"评论内容",2:"技术内容",3:"点评内容"}
+function nowtab(m,n){
+ if(n!=0 && m3[0]=="")m3[0]=document.getElementById("main2").innerHTML;
+ document.getElementById("tip"+m).style.left=n*100+'px';
+ document.getElementById("main2").innerHTML=m3[n];
+}
+//-->
+</script>

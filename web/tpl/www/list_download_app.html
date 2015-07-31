@@ -1,0 +1,36 @@
+<!-- inc:head -->
+<!-- inc:banner -->
+
+<div class="main">
+   <div class="left">
+     
+         <div class="lefttop">{:$m_rs[title]}</div>
+         <div class="leftmain">
+         <!-- inc:inc/catelist -->
+     
+      </div>
+   </div>
+   
+   <div class="right">
+      <div class="righttop"><div class="ll">{:$rs[cate_name]}</div><div class="rr">您当前的位置是：<a href="{:$_sys[siteurl]}">网站首页</a> > {:$m_rs[title]} > {:$rs[cate_name]}</div></div>
+      
+      <div class="rightmain">
+       
+       
+       	<!-- $rslist AS $key=>$value -->
+			<li style=" float:left; width:100%; height:30px; line-height:30px; border-bottom:1px dashed #CCCCCC">
+            <span style="float:right">&nbsp;{:date("Y-m-d",$value[post_date])}</span><a href="{:site_url('download','id='.$value[down])}" style="{:$value[style]}" title="{:$value[title]}">▶ {:$value[title]}</a></li>
+			<!-- end -->
+			</ul>
+			<!-- inc:inc/pagelist -->
+       
+      
+      </div>
+      
+   </div>
+   
+   
+   
+</div>
+
+<!-- inc:foot -->

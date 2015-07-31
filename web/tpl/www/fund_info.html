@@ -1,0 +1,20 @@
+<!--run:$fundname = $_GET['ts']-->
+<!--run:$fund_values = phpok_c_list($fundname,"100","","post_desc")-->
+<!--run:-->
+$yr=($fund_values[rslist][0][value]-1)*100;
+if($yr>0){
+   $yr = $yr.'%';
+}else{
+   $yr = '--';
+}
+<!--/run-->
+
+<div class="pro_li1">单位净值<br /><span class="sese">{:$fund_values[rslist][0][value]}</span></div>
+<div class="pro_li2">净值日期<br /><span class="sese">{:$fund_values[rslist][0][title]}</span></div>
+<div class="pro_li3">累计净值<br /><span class="sese">{:$fund_values[rslist][0][value]}</span></div>
+
+
+<div class="pro_li1" style="width: 140px">投资类型<br /><span class="sese" style="font-size:17px">{:$cate_rs[cate_name]}</span></div>
+<div class="pro_li2">成立日期<br /><span class="sese">{:$rs[a5]}</span></div>
+<div class="pro_li3">今年以来收益率<br /><span class="sese">{:$yr}</span></div>
+<!--run:unset($fund_values)-->

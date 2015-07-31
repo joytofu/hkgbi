@@ -1,0 +1,48 @@
+<!--计算预计年化收益率-->
+<script type="text/javascript">
+
+    function annual_yield(createDate,valueDate,fundvalue) {
+        var startDate = Date.parse(createDate);   //转化成时间戳格式
+        var endDate = Date.parse(valueDate);   //转化成时间戳格式
+        var daysStamp = (endDate - startDate) / 86400000;
+        var days = daysStamp + 1;   //基金发行了的天数
+        var yr = (Number(fundvalue) - 1) * 12 / (days / 30);   //预计年化收益率
+        if((yr*100)>=0) {
+            var yr = (yr * 100).toFixed(2) + '%';
+        }else{
+            var yr = '50%';
+        }
+        document.write(yr);
+    }
+</script>
+<!--run:-->
+$fund = phpok("products_fund_value");
+$products = phpok_m_list("products");
+$i=0;
+foreach($products[rslist] AS $key=>$value2){
+$fund[$i][createDate]=$value2[a5];
+$fund[$i][picture]=$value2[picture];
+$fund[$i][url]=msg_url($value2);
+$fund[$i][fund_name]=$value2[title];
+$fund[$i][note]=$value2[note];
+$i++;
+}
+unset($test2);
+<!--/run-->
+<!--$fund AS $key=>$value-->
+<div class="ipro" <!--if(($key+1)%3==0)-->id="ipro"<!--end-->>
+<img src="{:$value[picture]}">
+<p><a style="font-size:24px; color:#da251d" href="{:$value[url]}"  target="_blank">{:$value[fund_name]}</a></p>
+<div class="pro_txt">{:$value[note]}</div>
+<p id="nn">★ 单位净值:{:$value[val]}</p>
+<p id="nn">★ 净值日期:{:$value[title]}</p>
+<p id="nn">★ 成立日期:{:$value[createDate]}</p>
+<p id="nn">★ 预计年化收益率:<script>annual_yield("{:$value[createDate]}","{:$value[title]}",{:$value[val]});</script></p>
+<a href="index.php?c=list&cs=reg&" target="_blank">
+    <div class="button red" style="margin-top: 10px;margin-left: 29%;padding: 14px 25px 14px 25px;font-size: 20px;background-color: #9E1414;">
+        <div class="shine"></div>
+        立即预约
+    </div></a>
+</div>
+<!--end-->
+<!--run:unset($fund)-->

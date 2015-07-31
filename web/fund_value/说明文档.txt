@@ -1,0 +1,5 @@
+微信开发基金净值查询接口：
+api.php----接口文件
+DB.php----数据库类文件
+module.php----业务逻辑模块，sql语句
+weixin_getdata.php----微信AppEngin curl操作文件

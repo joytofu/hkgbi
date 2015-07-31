@@ -1,0 +1,56 @@
+<!-- inc:head -->
+<!-- inc:banner -->
+
+<div class="pro_bg">
+   <h1 class="pro_top">巨牛-天子国际期货一号</h1>
+   <div class="clear"></div>
+
+    <!--inc:fund_info-->
+   
+</div>
+
+<div id="tabs1">
+ <div class="menu1box">
+  <ul id="menu1">
+   <li class="hover" onmouseover="setTab(1,0)">产品概况</li>
+   <li onmouseover="setTab(1,1)">净值走势</li>
+
+  </ul>
+ </div>
+ <div class="main1box">
+  <div class="main" id="main1">
+   <ul class="block">
+  {:$rs[content]}
+       <!-- inc:share_button -->
+   </ul>
+      <ul><div id="svg" style="width:1200px;height:70%"></div>
+
+  </div>
+ </div>
+</div>
+<script>
+    var title = "天子国际期货一号";
+    var min = 0.7;
+</script>
+<!--inc:svg-->
+<!-- inc:foot -->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(m,n){
+ var tli=document.getElementById("menu"+m).getElementsByTagName("li");
+ var mli=document.getElementById("main"+m).getElementsByTagName("ul");
+ for(i=0;i<tli.length;i++){
+  tli[i].className=i==n?"hover":"";
+  mli[i].style.display=i==n?"block":"none";
+ }
+}
+/*第三种形式 利用一个背景层定位*/
+var m3={0:"",1:"评论内容",2:"技术内容",3:"点评内容"}
+function nowtab(m,n){
+ if(n!=0 && m3[0]=="")m3[0]=document.getElementById("main2").innerHTML;
+ document.getElementById("tip"+m).style.left=n*100+'px';
+ document.getElementById("main2").innerHTML=m3[n];
+}
+//-->
+</script>

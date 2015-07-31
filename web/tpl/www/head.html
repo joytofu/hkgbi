@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!-- if($sitetitle) -->{:$sitetitle} - <!-- end --><!-- if($_sys[seotitle]) --> {:$_sys[seotitle]} - <!-- end -->{:$_sys[sitename]}</title>
+<!-- if($_sys[google_site_verification]) --><meta name="google-site-verification" content="{:$_sys[google_site_verification]}" /><!-- end -->
+<!-- if($_sys[yahoo_site_key]) --><meta name="y_key" content="{:$_sys[yahoo_site_key]}" /><!-- end -->
+<!-- if($_sys[ms_site_validate]) --><meta name="msvalidate.01" content="{:$_sys[ms_site_validate]}" /><!-- end -->
+<!-- if($_sys[baidu_union_verify]) --><meta name="baidu_union_verify" content="{:$_sys[baidu_union_verify]}" /><!-- end -->
+<meta name="keywords" content="{:$_sys[keywords]}">
+<meta name="description" content="{:$_sys[description]}">
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+<link href="images/product.css" rel="stylesheet" type="text/css" />
+<link href="../../css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <!--载入JQuery和highcharts-->
+    <!--<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-2.1.1.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>-->
+    <!--<script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>-->
+    <script type="text/javascript" src="js/highcharts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <!--<script type="text/javascript" src="js/highcharts/canvas-tools.js"></script>
+    <script type="text/javascript" src="js/highcharts/highcharts-export-clientside.js"></script>-->
+</head>
+
+<body>
+<div id="top">
+<div class="top">
+<div class="logo"><a href="{:$_sys[siteurl]}" title="{:$_sys[sitename]}"><img src="{:$_sys[logo] ? $_sys[logo] : 'images/logo.png'}"  /></a></div>
+<div class="rtop"> <p style="margin-bottom:10px; ">  <a href="{:$_sys[siteurl]}" style="color:#BF2600;font-size: 15px" title="返回首页">返回首页</a>
+<A id=StranLink href="" name=StranLink style="margin-left:10px;" rel="nofollow">
+<font color="#BF2600"><span style="font-size: 15px; ">繁體中文版</span></font></A></p>
+
+    <ul class="nav_type">
+       <!-- run:$menulist = phpok_menu($id,$cid,$mid) -->
+		<!-- $menulist AS $key=>$value -->
+    <li class="li_type"><a href="{:$value[link]}" {if($value[target])}  target="_blank"{end} title="{:$value[title]}" {if($value[my_highlight])}  id="menubg"{end}>{:$value[title]}</a></li>
+		<!-- end -->
+		<!-- run:unset($menulist) --> 
+    </ul>
+
+
+
+</div>
+</div></div>

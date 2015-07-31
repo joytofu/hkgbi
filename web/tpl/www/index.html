@@ -1,0 +1,248 @@
+<!-- inc:head -->
+ <div id="banner">
+ <div id="flashBg" >
+<div id="flashLine">
+<div id="flash">
+        <!-- run:$kflist = phpok('picplayer') -->
+	<!-- $kflist[rslist] AS $key=>$value -->
+<div class="huir" {if($value[target])} target="_blank" {end} id="flash{:$key+1}"  style="background-image: url({:$value[picture]});<!--if($key==0)-->display: block; <!--else--> display: none;<!--end--> background-position: 50% 0%; padding-top:100px; background-repeat: no-repeat no-repeat; height:490px; " name="#0b0b0b">
+
+<div style="width:1200px; margin:0 auto; height:100%; overflow:hidden; line-height:50px;">
+ {:$value[content]}
+    </div>
+
+</div>		
+    	<!-- end -->
+
+  <div class="flash_bar">
+	
+
+<!-- run:$kflist = phpok('picplayer') -->
+	<!-- $kflist[rslist] AS $key=>$value -->
+    <div <!--if($key==0)-->class="dq" <!--else--> class="no"<!--end-->  id="f{:$key+1}" onclick="changeflash({:$key+1})"></div>
+    	<!-- end -->
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--inc:index_fund-->
+
+
+
+
+<div class="clear"></div>
+<div class="index_tu">
+  <div class="index_tu1"><a href="index.php?c=list&ms=book" title="基金预约"><div class="button red" style="margin-top: 0px;margin-left: 26%;padding: 14px 25px 14px 25px;font-size: 16px;background-color: #9E1414;">
+  <div class="shine"></div>
+  立即预约
+</div></a></div>
+</div>
+
+
+   <div class="index_news">
+       <!--run:-->
+       $notice = phpok_c_list("notice","100","","post_asc","isvouch");
+       $mt = phpok_c_list("mt","100","","post_asc","isvouch");
+       if(count($notice)!==0&&count($mt)!==0){
+          $size1 = count($notice[rslist]);
+          $size2 = count($mt[rslist]);
+          $res = $notice[rslist][$size1-1][post_date]>$mt[rslist][$size2-1][post_date]?$notice[rslist][$size1-1]:$mt[rslist][$size2-1];
+       }elseif(count($notice)!==0&&count($mt)==0){
+          $size = count($notice);
+          $res = $notice[rslist][$size-1];
+       }elseif(count($notice)==0&&count($mt)!==0){
+          $size = count($mt);
+          $res = $mt[rslist][$size-1];
+       }else{
+          $notice = phpok_c_list("notice","100","","post_asc");
+          $size = count($notice);
+          $res = $notice[rslist][$size-1];
+       }
+       <!--/run-->
+
+      <img src="{:$res[picture]}">
+      <div class="news_main">
+
+         <div class="ititle" style="margin-top:0px"><a href="index.php?c=msg&id={:$res[id]}" title="巨牛公告">{:$res[title]}</a></div>
+         <div class="news_txt" style="height:190px">
+             {:$res[note]}
+         </div>
+         <div class="i_more"><a href="index.php?c=list&cs=notice&" title="巨牛公告" style="color:#376db7">查看更多>></a></div>
+
+      </div>
+       
+   </div>
+   
+   <div class="index_tu2">
+       <a href="index.php?c=list&amp;cs=reg&amp;" title="基金预约"><div class="button red" style="margin-top: 0px;margin-right: 13px;padding: 14px 25px 14px 25px;font-size: 16px;background-color: #9E1414;">
+  <div class="shine"></div>
+  立即预约
+</div></a>
+       
+       <div class="renz">
+           <ul style="width: 100%">
+            <!--run:$any = phpok_m_list("renzheng",10)-->
+<!--$any[rslist] AS $key1=>$value1-->
+<!--if($key1>0)--><img src="images/xx.jpg" style="float:left; margin-top:15px;"><!--end-->
+  <li><p>{:$value1[title]}</p>
+      <a href="{:$value1[auth_link]}" target="_blank" rel="nofollow">
+     <img src="{:$value1[picture]}">
+          </a>
+</li>
+               			<!-- end -->
+       </ul>
+       </div>
+       
+       
+   </div>
+   
+   <div class="index_3"><!-- run:$dibu = phpok_msg("xinxi") -->{:nl2br($dibu[note])}</div>
+   <div class="index_4">
+      
+      <div class="feed_l">
+         <form method="post" action="submit.php" name="form1" id="form1" onsubmit="return check()">
+
+             
+<select name="title" type="text" id="title" class="text3"/>
+                <option value="保盈一号">保盈一号</option>
+                <option value="智选一号">智选一号</option>
+                <option value="中金岭南金汇资本一号">中金岭南金汇资本一号</option>
+            </select>
+             
+<input type="text" id="fullname" name="fullname" class="text3" onblur="this.style.color='#999';if(this.value=='') this.value='姓名';" 
+onkeyup="if(event.keyCode==13){doSearch();}" onfocus="this.style.color='#000';if(this.value=='姓名') this.value='';" value="姓名">
+             
+<input type="text" id="mobile" name="mobile" class="text3" onblur="this.style.color='#999';if(this.value=='') this.value='手机号码';" 
+onkeyup="if(event.keyCode==13){doSearch();}" onfocus="this.style.color='#000';if(this.value=='手机号码') this.value='';" value="手机号码">
+
+<input type="text" id="email" name="email" class="text3" onblur="this.style.color='#999';if(this.value=='') this.value='电子邮箱';" 
+onkeyup="if(event.keyCode==13){doSearch();}" onfocus="this.style.color='#000';if(this.value=='电子邮箱') this.value='';" value="电子邮箱">
+
+<input name="subscribe" type="checkbox" checked="checked" style="float:left; margin-top:3px; margin-right:5px;"/>若有巨牛最新的产品服务及优惠信息，我们将会发送您的电子邮箱。
+
+<input type="submit" value="立即预约" name="imageField" id="imageField" class="button red" style="float:right; margin-top: 20px;padding:15px;font-size:18px;background-color:#A90909">
+
+
+
+
+  </form>
+         
+         <script type="text/javascript">
+function check()
+{
+if (document.form1.fullname.value=="姓名")
+{
+window.alert("请输入姓名   ");
+document.form1.fullname.focus();
+return false;
+}
+if (document.form1.mobile.value=="手机号码")
+{
+window.alert("请输入手机号码 ");
+document.form1.mobile.focus();
+return false;
+}
+
+//
+String.prototype.Trim = function() {
+var m = this.match(/^\s*(\S+(\s+\S+)*)\s*$/);
+return (m == null) ? "" : m[1];
+}
+String.prototype.isMobile = function() {
+return (/^(?:18\d|14\d|13\d|15[123456789])-?\d{5}(\d{3}|\*{3})$/.test(this.Trim()));
+}
+String.prototype.isTel = function()
+{
+//"兼容格式: 国家代码(2到3位)-区号(2到3位)-电话号码(7到8位)-分机号(3位)"
+    //return (/^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+    return (/^(([0\+]\d{2,3}-)?(0\d{2,3}))(\d{7,8})(-(\d{3,}))?$/.test(this.Trim()));
+}
+
+with(document.form1){
+if (mobile.value.isMobile())  {
+
+}
+else {
+alert("请输入正确的手机号码\n\n例如:13534596987");
+mobile.focus();
+return false;
+
+}
+}
+//
+
+
+if (document.form1.email.value=="电子邮箱")
+{
+window.alert("请输入电子邮箱   ");
+document.form1.email.focus();
+return false;
+}
+
+ var temp = document.getElementById("email");
+        var myreg = /(\S)+[@]{1}(\S)+[.]{1}(\w)+/;
+        if(temp.value!="")
+        {
+            if(!myreg.test(temp.value))
+            {
+               window.alert("您的E-mail格式有误，请重新输入!!       ");
+            document.form1.email.focus();
+return false;
+            }
+          
+        }
+
+
+}
+</script>
+      
+      </div>
+      <div class="feed_r">
+         <li><!-- run:$dibu = phpok_msg("w1") --><img src="images/w1.jpg" align="left">{:nl2br($dibu[note])}</li>
+         <li><!-- run:$dibu = phpok_msg("w2") --><a href="{:nl2br($dibu[note])}" target="_blank"><img src="images/w2.jpg" align="left">{:nl2br($dibu[note])}</a></li>
+         <li><img src="images/w3.jpg" align="left"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3122616794&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3122616794:41" alt="联系我们" title="联系我们" rel="nofollow"/></a>
+             <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3122139387&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:3122139387:41" alt="联系我们" title="联系我们" rel="nofollow"/></a>
+          
+          </li>
+      </div>
+      
+   </div>
+   <!-- inc:foot -->
+<script>
+var currentindex=1;
+var length = $(".flash_bar div").length;
+//$("#flashBg").css("background-color",$("#flash1").attr("name"));
+function changeflash(i) {	
+currentindex=i;
+for (j=1;j<=length;j++){
+	if (j==i) 
+	{$("#flash"+j).fadeIn("normal");
+	$("#flash"+j).css("display","block");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("dq");
+	//$("#flashBg").css("background-color",$("#flash"+j).attr("name"));
+	}
+	else
+	{$("#flash"+j).css("display","none");
+	$("#f"+j).removeClass();
+	$("#f"+j).addClass("no");}
+}}
+function startAm(){
+timerID = setInterval("timer_tick()",5000);
+}
+function stopAm(){
+clearInterval(timerID);
+}
+function timer_tick() {
+    currentindex=currentindex>=length?1:currentindex+1;
+	changeflash(currentindex);}
+$(document).ready(function(){
+$(".flash_bar div").mouseover(function(){stopAm();}).mouseout(function(){startAm();});
+startAm();
+});
+</script><!--
+<a href="c2306.html">联系我们</a> | <a href="c2305.html">使用条款</a> | <a href="c2299.html">隐私条约</a> | <a href="c2298.html">风险提示</a> | <a href="index.php?c=list&ms=book">加入巨牛</a> | <a href="aboutus.html">关于巨牛</a><br />-->
+

@@ -1,0 +1,33 @@
+<div class="saixuan">
+  <p style=" font-size:20px; color:#ee1c23; margin-bottom:15px;">私募产品筛选</p>
+  <div class="ss">投资类型：
+  <a href="index.php?c=list&ms=search&catid=0&rg={:$rg}&qx={:$qx}&ns={:$ns}" <!--if($catid==false)-->id="ss"<!--end-->>不限</a>
+  <!-- run:$catelist = phpok_s_catelist('pros','ts') -->  
+	<!-- $catelist AS $key=>$value -->
+<a href="index.php?c=list&ms=search&catid={:$value[id]}&rg={:$rg}&qx={:$qx}&ns={:$ns}" title="{:$value[cate_name]}" <!--if($catid==$value[id])--> id="ss"<!--end-->>{:$value[cate_name]}</a>
+     <!--end-->
+</div>
+  <div class="ss">投资年份：
+  <a href="index.php?c=list&ms=search&qx={:$qx}&ns={:$ns}&catid={:$catid}" <!--if($rg==false)-->id="ss"<!--end-->>不限</a>
+  <!--run:$any = phpok_m_list('s_rg',22)-->
+<!--$any[rslist] AS $key=>$value-->
+<a href="index.php?c=list&ms=search&rg={:$value[title]}&qx={:$qx}&ns={:$ns}&catid={:$catid}" <!--if($rg==$value[title])-->id="ss"<!--end-->>{:$value[title]}</a>
+               			<!-- end -->
+  
+  </div>
+  <div class="ss">基金净值：
+  <a href="index.php?c=list&ms=search&qx={:$qx}&rg={:$rg}&catid={:$catid}" <!--if($ns==false)-->id="ss"<!--end-->>不限</a>
+  <!--run:$any = phpok_m_list('s_ns',22)-->
+<!--$any[rslist] AS $key=>$value-->
+<a href="index.php?c=list&ms=search&rg={:$rg}&qx={:$qx}&ns={:$value[title]}&catid={:$catid}" <!--if($ns==$value[title])-->id="ss"<!--end-->>{:$value[title]}</a>
+               			<!-- end -->
+  </div>
+  <div class="ss">投资门槛：
+  <a href="index.php?c=list&ms=search&ns={:$ns}&rg={:$rg}&catid={:$catid}" <!--if($qx==false)-->id="ss"<!--end-->>不限</a>
+  <!--run:$any = phpok_m_list('s_qx',22)-->
+<!--$any[rslist] AS $key=>$value-->
+<a href="index.php?c=list&ms=search&rg={:$rg}&qx={:$value[title]}&ns={:$ns}&catid={:$catid}" <!--if($qx==$value[title])-->id="ss"<!--end-->>{:$value[title]}</a>
+               			<!-- end -->
+  </div>
+  
+</div>
